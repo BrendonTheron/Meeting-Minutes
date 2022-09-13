@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+  %}
+  <h1 align="center">Meeting Minutes</h1>
+  {% for note in user.notes%}
+  <ul class="list-group list-group-flush" id="notes">
+    <li class="list-group-item">Date: {{ note.date}}
+    </li>
+    <li class="list-group-item">Topic: {{ note.topic}}
+    </li>
+    <li class="list-group-item">Attendees: {{ note.attendees}}
+    </li>
+    <li class="list-group-item">Issue Raised by: {{ note.issue}}
+    </li>
+    <li class="list-group-item">Action/s Required: {{ note.action}}
+    </li>
+    <li class="list-group-item">Action to be done by: {{ note.actionby}}
+    </li>
+    <li class="list-group-item">Subsequent Information: {{ note.information}}
+    </li>
+    <button type="button" class="btn btn-primary" onClick="deleteNote({{ note.id }})">Delete Minutes
+      <span aria-hidden="true">&times;</span>
+    </button>
+    {% endfor %}
+  </ul>
+  
+  {% endblock %}

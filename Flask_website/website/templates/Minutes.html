@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+  %}
+
+  <h1 align="center">New Minutes</h1>
+
+  <form method="POST">
+
+	  <p for="date-time">Date: <script> document.write(new Date().toLocaleDateString()) </script></p>
+    <p>Topic</p>
+    <textarea name="topic" id="topic" class="topic"></textarea>
+    <p>Attendees</p>
+    <textarea name="attendees" id="attendees" class="attendees"></textarea>
+    <p>Issue Raised by:</p>
+    <textarea name="issue" id="issue" class="issue"></textarea>
+    <p>Action/s Required</p>
+    <textarea name="action" id="action" class="action"></textarea>
+    <p>To be Actioned by:</p>
+    <textarea name="actionby" id="actionby" class="actionby"></textarea>
+    <p>Subsequent Information</p>
+    <textarea name="information" id="information" class="information"></textarea>
+    <button type"Submit" class="btn btn-primary">Submit Minutes</button>
+</form>
+  {% endblock %}
+
+  
